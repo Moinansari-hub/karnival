@@ -1,0 +1,18 @@
+
+<div class="pokemon-list-container">
+    <h1 class="page-title">Search any Pokémon you love</h1>
+  
+    <div class="search-container">
+        <input type="text" placeholder="Search Pokémon" [(ngModel)]="searchQuery" />
+    </div>
+    <div class="no-results" *ngIf="filteredPokemonList.length === 0">
+        <p>No data found</p>
+      </div>
+    <div *ngFor="let pokemon of filteredPokemonList" class="pokemon-item">
+      <a [routerLink]="['/pokemon', pokemon.name]">
+        <img [src]="pokemon?.sprites?.front_default" alt="{{ pokemon.name }}" class="pokemon-thumbnail" />
+        <p>{{ pokemon.name }}</p>
+      </a>
+    </div>
+  </div>
+  

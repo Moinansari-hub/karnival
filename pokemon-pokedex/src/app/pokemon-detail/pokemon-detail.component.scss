@@ -1,0 +1,57 @@
+
+  
+ /* Pokemon details container */
+
+.pokemon-details-container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+ }
+ div {
+    background: linear-gradient(45deg, #fff, #f9f9f9); /* Gradient background color */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+    transition: transform 0.3s; /* Smooth transition when hovered */
+ }
+
+ div:hover {
+    transform: translateY(-10px); /* Move upwards slightly when hovered */
+ }
+  
+ /* Pokemon name heading */
+
+ /* Back button styling */
+.back-button {
+    background-color: #3498db; /* Button background color */
+    color: #fff; /* Button text color */
+    padding: 10px 15px; /* Button padding */
+    border: none; /* Remove button border */
+    border-radius: 5px; /* Button border radius */
+    cursor: pointer; /* Add pointer cursor on hover */
+    font-size: 16px; /* Button font size */
+    margin-bottom: 15px; /* Add margin below the button */
+    float: left;
+    align-self: flex-start; /* Align the button to the start (left) */
+  }
+
+
+.pokemon-image {
+   max-width: 100%;
+   border-radius: 10px; /* Set border radius for the image */
+   margin-bottom: 10px;
+ }
+ 
+ .moves-container {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 10px;
+ }
+ 
+ .move-item {
+   padding: 10px;
+   border-radius: 8px;
+   background-color: #e6f7ff; /* Set background color for moves */
+   color: #333;
+ }

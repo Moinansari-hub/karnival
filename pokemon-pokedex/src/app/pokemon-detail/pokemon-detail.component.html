@@ -1,0 +1,28 @@
+
+  <div *ngIf="pokemonDetails" class="pokemon-details-container">
+  <button class="back-button" (click)="goBack()">&lt;Back</button>
+    <h2>{{ pokemonDetails.name }}</h2>
+    <img [src]="pokemonDetails?.sprites?.front_default" alt="{{ pokemonDetails.name }}" class="pokemon-image" />
+    
+    <p>Description: {{ pokemonDetails?.speciesDetails?.flavor_text_entries?.[0]?.flavor_text }}</p>
+    <p>Height: {{ pokemonDetails?.height }}</p>
+    <p>Weight: {{ pokemonDetails?.weight }}</p>
+    <p>Habitat: {{ pokemonDetails?.speciesDetails?.habitat?.name }}</p>
+  
+    <div *ngIf="pokemonDetails.evolutionChain && pokemonDetails.evolutionChain.length >0">
+      <h3>Evolution Chain:</h3>
+      <!-- Display evolution chain details -->
+    </div>
+  
+    <div *ngIf="pokemonDetails.moves && pokemonDetails.moves.length > 0">
+      <h3>Moves:</h3>
+      <div class="moves-container">
+        <div *ngFor="let move of pokemonDetails.moves" class="move-item">
+          {{ move.move.name }}
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
